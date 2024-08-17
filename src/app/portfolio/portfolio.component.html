@@ -1,0 +1,34 @@
+<div class="bg-white pt-24   flex justify-center items-center">
+    <div class="text-center">
+
+        <h2 class="text-gray-700 text-4xl font-bold pt-12">PORTFOLIO COMPONENT</h2>
+
+        <app-black-star></app-black-star>
+
+
+    </div>
+
+</div>
+
+<div class="container w-[85%] pb-6">
+    <div class="grid lg:grid-cols-3 gap-12 md:grid-cols-2 sm:grid-cols-1">
+
+        @for (src of srcArray; track $index) {
+        <div (click)="flag = false" class="relative group cursor-pointer">
+            <img (click)="srcValue($event)" [src]="src" alt="" class="rounded-lg">
+            <div class="card pointer-events-none">
+                <i class="fa-solid fa-plus text-white text-8xl"></i>
+            </div>
+        </div>
+        }
+
+    </div>
+
+</div>
+
+
+<div [class.hidden]="flag"
+(click)="hideModel($event.target , img)"
+    class="z-10 w-full h-full fixed flex justify-center items-center top-0 right-0 bg-opacity-25 bg-blue-600">
+    <img #img [src]="targetImageSrc" alt="" class="rounded-lg" width="600">
+</div>

@@ -1,0 +1,22 @@
+<div class="bg-white pt-24   flex justify-center items-center flex-col">
+
+
+    <h2 class="text-gray-700 text-4xl font-bold pt-12">CONTACT SECTION</h2>
+
+    <app-black-star></app-black-star>
+    <form action="" class="w-1/2 mx-auto  pt-12 ">
+        <label for="userName" class="text-teal-500 relative top-0 transition-all duration-500 " [class.top-20]="!userName.length"> userName :</label>
+        <input type="text" placeholder="userName" name="userName" id="userName" [(ngModel)]="userName" required class=" w-full p-5 mb-4 border-b-2 focus:outline-none relative  my-2" >
+        <label for="userAge" class="text-teal-500 relative top-0 transition-all duration-500 " [class.top-20]="!userAge.length"> userAge :</label>
+        <input type="text" placeholder="userAge" name="userAge" id="userAge" [(ngModel)]="userAge" required class=" w-full p-5 mb-4 border-b-2 focus:outline-none relative  my-2" >
+        <label for="userEmail" class="text-teal-500 relative top-0 transition-all duration-500 " [class.top-20]="!userEmail.length"> userEmail :</label>
+        <input type="text" placeholder="userEmail" name="userEmail" id="userEmail" [(ngModel)]="userEmail" required class=" w-full p-5 mb-4 border-b-2 focus:outline-none relative  my-2" >
+        <label for="userPassword" class="text-teal-500 relative top-0 transition-all duration-500 " [class.top-20]="!userPassword.length"> userPassword :</label>
+        <input type="text" placeholder="userPassword" name="userPassword" id="userPassword" [(ngModel)]="userPassword" required class=" w-full p-5 mb-4 border-b-2 focus:outline-none relative  my-2" >
+        
+        
+        
+        <button type="submit" class=" bg-teal-500 p-3 rounded-lg text-sm text-white mt-2 mb-6">Send Message</button>
+    </form>
+   
+</div>
